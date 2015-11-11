@@ -1,0 +1,244 @@
+@import "../../css-lib/base";
+@import "../../css-lib/library";
+@import "../../css-lib/elements";
+@import "../../css-lib/variables";
+@import "../../mands-css/mands-fonts";
+
+@import "vars";
+@import "typography";
+@import "nav-bar";
+@import "base";
+
+
+#main-content {
+  
+}
+
+@padding: 15px;
+
+#product-details {
+  padding: @padding;
+
+  header {
+    display: flex;
+    align-items: stretch;
+
+    div {
+      width: 40%;
+      &:first-child {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+
+    h4 {
+      letter-spacing: 0;
+      text-transform: none;
+      margin-bottom: 0.2rem;
+    }
+
+    h2 {
+      margin-top: auto;
+    }
+  }
+}
+
+#product-details header {
+
+}
+
+
+#product-details header div {
+  
+}
+
+#sparks-offer {
+  background: url(../images/sparks.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 20px;
+  text-align: center;
+  line-height: 1;
+
+  h2 {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+  }
+
+  h4 {
+    margin: 0;
+  }
+}
+
+#other-offers {
+  margin-bottom: 10px;
+  > div {
+    
+    //flex: 1;
+    // display: flex;
+    // overflow: auto;
+    //white-space: nowrap;
+    ul {
+      // min-height: min-content;
+      // display: flex;
+      padding: 5px @padding @padding @padding;
+      white-space: nowrap;
+      overflow-x: auto;
+      .scrollable;
+      li {
+        // .mixin-flex;
+        // align-items: center;
+        // -webkit-align-items: center;
+        border: 2px solid @offer;
+        display: inline-block;
+        color: @offer;
+        padding: 15px;
+        margin-right: 12px;
+        width: 110px;
+        white-space: normal;
+        text-align: center;
+
+        &:first-child {
+          width: 185px
+        }
+      }
+
+    }
+  }
+}
+
+#product-information {
+  
+  border-bottom: 1px solid @light-grey;
+
+  h4 {
+    
+  }
+
+  ul {
+    padding-left: @padding;
+    border-top: 1px solid @light-grey;
+    @ht: 54px;
+
+    li {
+      
+      height: @ht;
+      line-height: @ht;
+      border-bottom: 1px solid @light-grey;
+      width: 88%;
+      margin-left: 12%;
+      background: url(../images/icon-arrow.png) no-repeat right center;
+      background-size: auto 20px;
+      position: relative;
+
+      .icon {
+        position: absolute;
+        width: 35px;
+        top: 10px;
+        left: -45px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.offer-section {
+  padding: 20px 0 0px 0;
+}
+
+#stock {
+  padding: 20px;
+  ul {
+    .mixin-flex;
+    text-align: center;
+    align-items: flex-start;
+
+    li {
+      width: 30%;
+      font-size: 2.8rem;
+    }
+
+    span {
+      font-size: 1.4rem;
+      display: block;
+    }
+  }
+}
+
+.wrapper {
+  .clearfix;
+  position: relative;
+  max-width: @max-width;
+  margin: 0 auto 0 auto;
+  padding: 0 10px;
+}
+
+#overlay {
+  position: fixed;
+  top: 0; bottom: 0; right: 0; left: 0;
+  background: white;
+  overflow-x: hidden;
+  overlflow-y: auto;
+  .scrollable;
+  z-index: 200000000;
+  padding: 20px;
+
+  h1 {
+    margin-bottom: -30px;
+  }
+
+  h4 {
+    margin-top: 40px;
+    text-align: left;
+  }
+
+  p {
+    margin-bottom: 24px;
+  }
+}
+
+.mixin-caps() {
+  text-transform: uppercase;
+  font-size: 0.6875em;
+  font-weight: 500;
+}
+
+.mixin-flex(){
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  justify-content: -webkit-space-between;
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+button {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  background: black;
+  border: none;
+  .bold;
+  font-size: 0.85em;
+  color: white;
+  &.small {
+    height: 40px;
+    border: 2px solid black;
+    line-height: 40px;
+    color: black;
+    background: white;
+  }
+}
